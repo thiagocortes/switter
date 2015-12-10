@@ -1,0 +1,213 @@
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-01 13:39:02 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/thiago/.rvm/gems/ruby-2.1.5/gems/railties-4.1.8/lib/rails/templates/rails/welcome/index.html.erb (13.3ms)
+Completed 200 OK in 58ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-01 13:39:55 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/thiago/.rvm/gems/ruby-2.1.5/gems/railties-4.1.8/lib/rails/templates/rails/welcome/index.html.erb (1.2ms)
+Completed 200 OK in 13ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsuarios (20150501164119)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "usuarios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150501164119"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateMicroposts (20150501164153)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "usuario_id" integer, "conteudo" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150501164153"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-01 13:45:03 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/thiago/.rvm/gems/ruby-2.1.5/gems/railties-4.1.8/lib/rails/templates/rails/welcome/index.html.erb (1.1ms)
+Completed 200 OK in 16ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2015-05-01 13:45:07 -0300
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered usuarios/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 1216ms (Views: 1212.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/microposts.css?body=1" for 127.0.0.1 at 2015-05-01 13:45:08 -0300
+
+
+Started GET "/assets/paginas.css?body=1" for 127.0.0.1 at 2015-05-01 13:45:09 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-01 13:45:09 -0300
+
+
+Started GET "/assets/usuarios.css?body=1" for 127.0.0.1 at 2015-05-01 13:45:09 -0300
+
+
+Started GET "/assets/paginas_inicio.css?body=1" for 127.0.0.1 at 2015-05-01 13:45:09 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-01 13:45:09 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-01 13:45:09 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-01 13:45:09 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-01 13:45:09 -0300
+
+
+Started GET "/assets/microposts.js?body=1" for 127.0.0.1 at 2015-05-01 13:45:09 -0300
+
+
+Started GET "/assets/paginas.js?body=1" for 127.0.0.1 at 2015-05-01 13:45:09 -0300
+
+
+Started GET "/assets/paginas_inicio.js?body=1" for 127.0.0.1 at 2015-05-01 13:45:09 -0300
+
+
+Started GET "/assets/usuarios.js?body=1" for 127.0.0.1 at 2015-05-01 13:45:09 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-01 13:45:09 -0300
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2015-05-01 13:45:14 -0300
+Processing by UsuariosController#new as HTML
+  Rendered usuarios/_form.html.erb (50.0ms)
+  Rendered usuarios/new.html.erb within layouts/application (85.3ms)
+Completed 200 OK in 157ms (Views: 155.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2015-05-01 13:45:21 -0300
+Processing by UsuariosController#index as HTML
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered usuarios/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 52ms (Views: 50.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2015-05-01 13:45:28 -0300
+Processing by UsuariosController#new as HTML
+  Rendered usuarios/_form.html.erb (1.5ms)
+  Rendered usuarios/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 65ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2015-05-01 13:45:34 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hWFltnF9qxtbU+OGq++uxITPaU0SIFW1bVRoyWnUkEM=", "usuario"=>{"nome"=>"thiago cortes", "email"=>"thiago_silvacortes@hotmail.com"}, "commit"=>"Create Usuario"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "nome", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-05-01 16:45:34.157192"], ["email", "thiago_silvacortes@hotmail.com"], ["nome", "thiago cortes"], ["updated_at", "2015-05-01 16:45:34.157192"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/usuarios/1
+Completed 302 Found in 12ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2015-05-01 13:45:34 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"  WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered usuarios/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 67ms (Views: 64.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/microposts.css?body=1" for 127.0.0.1 at 2015-05-01 13:45:34 -0300
+
+
+Started GET "/assets/paginas.css?body=1" for 127.0.0.1 at 2015-05-01 13:45:34 -0300
+
+
+Started GET "/assets/paginas_inicio.css?body=1" for 127.0.0.1 at 2015-05-01 13:45:34 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-01 13:45:34 -0300
+
+
+Started GET "/assets/usuarios.css?body=1" for 127.0.0.1 at 2015-05-01 13:45:34 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-01 13:45:34 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-01 13:45:34 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-01 13:45:34 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-01 13:45:34 -0300
+
+
+Started GET "/assets/microposts.js?body=1" for 127.0.0.1 at 2015-05-01 13:45:34 -0300
+
+
+Started GET "/assets/paginas.js?body=1" for 127.0.0.1 at 2015-05-01 13:45:34 -0300
+
+
+Started GET "/assets/paginas_inicio.js?body=1" for 127.0.0.1 at 2015-05-01 13:45:34 -0300
+
+
+Started GET "/assets/usuarios.js?body=1" for 127.0.0.1 at 2015-05-01 13:45:34 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-01 13:45:34 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-01 14:28:03 -0300
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered usuarios/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 53ms (Views: 51.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/microposts.css?body=1" for 127.0.0.1 at 2015-05-01 14:28:03 -0300
+
+
+Started GET "/assets/paginas.css?body=1" for 127.0.0.1 at 2015-05-01 14:28:03 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-01 14:28:03 -0300
+
+
+Started GET "/assets/paginas_inicio.css?body=1" for 127.0.0.1 at 2015-05-01 14:28:03 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-01 14:28:03 -0300
+
+
+Started GET "/assets/usuarios.css?body=1" for 127.0.0.1 at 2015-05-01 14:28:03 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-05-01 14:28:03 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-01 14:28:03 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-01 14:28:03 -0300
+
+
+Started GET "/assets/microposts.js?body=1" for 127.0.0.1 at 2015-05-01 14:28:03 -0300
+
+
+Started GET "/assets/paginas.js?body=1" for 127.0.0.1 at 2015-05-01 14:28:03 -0300
+
+
+Started GET "/assets/paginas_inicio.js?body=1" for 127.0.0.1 at 2015-05-01 14:28:03 -0300
+
+
+Started GET "/assets/usuarios.js?body=1" for 127.0.0.1 at 2015-05-01 14:28:03 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-01 14:28:03 -0300
